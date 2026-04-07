@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from app.core.constants import SUPPORTED_TRANSITIONS
+from ..core.constants import SUPPORTED_TRANSITIONS
 
 
 class TransitionService:

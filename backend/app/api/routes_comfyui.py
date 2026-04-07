@@ -2,8 +2,8 @@ from __future__ import annotations
 
 from fastapi import APIRouter
 
-from app.core.config import settings
-from app.services.comfyui_service import ComfyUIService
+from ..core.config import settings
+from ..services.comfyui_service import ComfyUIService
 
 router = APIRouter(prefix="/comfyui", tags=["comfyui"])
 

@@ -1,17 +1,28 @@
 from __future__ import annotations
 
 import asyncio
+import sys
+from pathlib import Path
 
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 
-from app.api import routes_comfyui, routes_result, routes_tasks, routes_upload
-from app.core.config import settings
-from app.core.logger import configure_logging
-from app.services.task_service import task_service
-from app.services.storage_service import storage_service
-from app.utils.file_utils import ensure_dir
+if __package__ in {None, ""}:
+    sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+    from app.api import routes_comfyui, routes_result, routes_tasks, routes_upload
+    from app.core.config import settings
+    from app.core.logger import configure_logging
+    from app.services.task_service import task_service
+    from app.services.storage_service import storage_service
+    from app.utils.file_utils import ensure_dir
+else:
+    from .api import routes_comfyui, routes_result, routes_tasks, routes_upload
+    from .core.config import settings
+    from .core.logger import configure_logging
+    from .services.task_service import task_service
+    from .services.storage_service import storage_service
+    from .utils.file_utils import ensure_dir
 
 configure_logging()
 
@@ -57,3 +68,9 @@ async def task_progress_ws(websocket: WebSocket, task_id: str) -> None:
             await asyncio.sleep(1)
     except WebSocketDisconnect:
         return
+
+
+if __name__ == "__main__":
+    import uvicorn
+
+    uvicorn.run("app.main:app", host="0.0.0.0", port=8000)

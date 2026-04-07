@@ -4,8 +4,8 @@ from pathlib import Path
 
 from fastapi import UploadFile
 
-from app.core.config import settings
-from app.utils.file_utils import ensure_dir, safe_filename, save_upload_file
+from ..core.config import settings
+from ..utils.file_utils import ensure_dir, safe_filename, save_upload_file
 
 
 class LocalStorageService:

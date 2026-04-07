@@ -6,9 +6,9 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Literal
 
-from app.core.logger import get_logger
-from app.utils.ffmpeg_utils import quote_concat_path, run_command
-from app.utils.file_utils import ensure_dir
+from ..core.logger import get_logger
+from ..utils.ffmpeg_utils import quote_concat_path, run_command
+from ..utils.file_utils import ensure_dir
 
 logger = get_logger(__name__)
 

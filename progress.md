@@ -165,6 +165,33 @@
   - `task_plan.md`
   - `progress.md`
 
+### Phase 11: Poetry & IDE Import Fix
+- **Status:** complete
+- Actions taken:
+  - Moved `package-mode = false` to `[tool.poetry]`.
+  - Synced backend `requirements.txt` dependencies into `backend/pyproject.toml`.
+  - Ran `poetry lock` and `poetry install`.
+  - Converted backend internal imports from absolute `app.*` imports to package-relative imports to avoid IDE unresolved import errors when the repository root is opened.
+  - Confirmed no `from app.` or `import app.` imports remain in `backend/app`.
+- Files created/modified:
+  - `backend/pyproject.toml`
+  - `backend/poetry.lock`
+  - `backend/app/**`
+  - `task_plan.md`
+  - `progress.md`
+
+### Phase 12: Light UI Polish
+- **Status:** complete
+- Actions taken:
+  - Reworked the frontend global styles from the previous dark workbench look to a light cool blue/gray interface.
+  - Improved hierarchy and readability for the title area, upload zone, panels, form controls, buttons, progress bar, ComfyUI status, metrics, and metadata timeline.
+  - Kept the existing React component structure and changed only CSS plus progress tracking files.
+  - Ran the frontend production build after the style update.
+- Files created/modified:
+  - `frontend/src/styles.css`
+  - `task_plan.md`
+  - `progress.md`
+
 ## Test Results
 | Test | Input | Expected | Actual | Status |
 |------|-------|----------|--------|--------|
@@ -194,6 +221,10 @@
 | Phase 9 backend import | `.venv/bin/python -c "from app.main import app; print(app.title)"` | App imports | Printed app title | Pass |
 | Phase 9 Compose config | `docker compose config` | Compose file parses | Parsed successfully | Pass |
 | Phase 9 pipeline smoke | Direct pipeline with PNG material | Task completes and timeline includes material | Completed with `material_image` in timeline | Pass |
+| Poetry config check | `poetry check` | Poetry config valid | `All set!` | Pass |
+| Poetry app import | `poetry run python -c "from app.main import app; print(app.title)"` | App imports | Printed `AI Highlight Video Agent` | Pass |
+| Relative import sweep | `grep -R "from app\\.\\|import app\\." backend/app` | No backend internal absolute app imports | No matches | Pass |
+| Phase 12 frontend build | `npm run build` in `frontend` | TypeScript/Vite build succeeds after UI polish | Build succeeded, output in `frontend/dist` | Pass |
 
 ## Error Log
 | Timestamp | Error | Attempt | Resolution |
@@ -203,8 +234,8 @@
 ## 5-Question Reboot Check
 | Question | Answer |
 |----------|--------|
-| Where am I? | Phase 10 complete |
+| Where am I? | Phase 12 complete |
 | Where am I going? | Waiting for the next user request |
 | What's the goal? | Build a locally runnable FastAPI + React/Vite + FFmpeg MVP for AI highlight video generation |
 | What have I learned? | See `findings.md` |
-| What have I done? | Implemented and smoke-tested the MVP |
+| What have I done? | Implemented and smoke-tested the MVP, added Poetry/IDE fixes, and polished the frontend with a light UI |

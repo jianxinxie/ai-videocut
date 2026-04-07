@@ -5,9 +5,9 @@ from json import JSONDecodeError
 from pathlib import Path
 from threading import RLock
 
-from app.core.logger import get_logger
-from app.models.task import TaskRecord
-from app.utils.file_utils import ensure_dir
+from ..core.logger import get_logger
+from ..models.task import TaskRecord
+from ..utils.file_utils import ensure_dir
 
 logger = get_logger(__name__)
 

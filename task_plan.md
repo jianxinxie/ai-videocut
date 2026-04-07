@@ -4,7 +4,7 @@
 Build a locally runnable MVP for the AI Highlight Video Agent described in `Agent.md`, with FastAPI backend, React/Vite frontend, FFmpeg-based video clipping pipeline, progress reporting, and ComfyUI extension points.
 
 ## Current Phase
-Phase 10
+Phase 11
 
 ## Phases
 
@@ -71,6 +71,21 @@ Phase 10
 - [x] Stage project files
 - [x] Create Git commit
 - [x] Push to GitHub `origin/main`
+- **Status:** complete
+
+### Phase 11: Poetry & IDE Import Fix
+- [x] Move Poetry `package-mode = false` under `[tool.poetry]`
+- [x] Sync `requirements.txt` dependencies into `pyproject.toml`
+- [x] Regenerate `poetry.lock`
+- [x] Convert backend internal `app.*` imports to package-relative imports
+- [x] Verify Poetry check, Python compile, and app import
+- **Status:** complete
+
+### Phase 12: Light UI Polish
+- [x] Convert the frontend from dark workbench styling to a light cool-toned interface
+- [x] Improve panels, upload controls, buttons, form focus states, progress display, status cards, and timeline readability
+- [x] Keep existing React component structure and avoid changing backend behavior
+- [x] Verify the frontend production build
 - **Status:** complete
 
 ## Key Questions

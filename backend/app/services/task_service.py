@@ -5,10 +5,10 @@ from threading import RLock
 from time import time
 from uuid import uuid4
 
-from app.core.constants import STAGE_MESSAGES
-from app.core.config import settings
-from app.models.task import TaskRecord, TaskStatus
-from app.services.task_repository import JsonTaskRepository
+from ..core.constants import STAGE_MESSAGES
+from ..core.config import settings
+from ..models.task import TaskRecord, TaskStatus
+from .task_repository import JsonTaskRepository
 
 
 class TaskService:

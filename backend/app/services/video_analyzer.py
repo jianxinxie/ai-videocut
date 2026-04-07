@@ -4,10 +4,10 @@ import math
 import re
 from pathlib import Path
 
-from app.core.logger import get_logger
-from app.models.schemas import Segment
-from app.services.ffmpeg_service import FFmpegService
-from app.utils.ffmpeg_utils import FFmpegError
+from ..core.logger import get_logger
+from ..models.schemas import Segment
+from .ffmpeg_service import FFmpegService
+from ..utils.ffmpeg_utils import FFmpegError
 
 logger = get_logger(__name__)
 

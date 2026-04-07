@@ -1,7 +1,7 @@
 from __future__ import annotations
 
-from app.models.schemas import Segment
-from app.utils.time_utils import clamp_duration, duration
+from ..models.schemas import Segment
+from ..utils.time_utils import clamp_duration, duration
 
 
 class HookSelector:

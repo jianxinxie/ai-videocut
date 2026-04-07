@@ -3,19 +3,19 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from app.core.config import settings
-from app.core.logger import get_logger
-from app.models.schemas import MaterialInsertion, Segment, TaskConfig
-from app.models.task import TaskStatus
-from app.services.ffmpeg_service import FFmpegService, RenderItem
-from app.services.highlight_selector import HighlightSelector
-from app.services.hook_selector import HookSelector
-from app.services.material_inserter import MaterialInserter
-from app.services.storage_service import storage_service
-from app.services.task_service import task_service
-from app.services.transition_service import TransitionService
-from app.services.video_analyzer import VideoAnalyzer
-from app.utils.file_utils import ensure_dir
+from ..core.config import settings
+from ..core.logger import get_logger
+from ..models.schemas import MaterialInsertion, Segment, TaskConfig
+from ..models.task import TaskStatus
+from ..services.ffmpeg_service import FFmpegService, RenderItem
+from ..services.highlight_selector import HighlightSelector
+from ..services.hook_selector import HookSelector
+from ..services.material_inserter import MaterialInserter
+from ..services.storage_service import storage_service
+from ..services.task_service import task_service
+from ..services.transition_service import TransitionService
+from ..services.video_analyzer import VideoAnalyzer
+from ..utils.file_utils import ensure_dir
 
 logger = get_logger(__name__)
 

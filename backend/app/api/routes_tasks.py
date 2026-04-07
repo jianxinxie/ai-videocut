@@ -5,12 +5,12 @@ import json
 from fastapi import APIRouter, BackgroundTasks, File, Form, HTTPException, UploadFile, status
 from pydantic import ValidationError
 
-from app.core.logger import get_logger
-from app.models.schemas import TaskConfig, TaskCreateResponse, TaskStateResponse
-from app.models.task import TaskStatus
-from app.services.storage_service import storage_service
-from app.services.task_queue import task_queue
-from app.services.task_service import task_service
+from ..core.logger import get_logger
+from ..models.schemas import TaskConfig, TaskCreateResponse, TaskStateResponse
+from ..models.task import TaskStatus
+from ..services.storage_service import storage_service
+from ..services.task_queue import task_queue
+from ..services.task_service import task_service
 
 router = APIRouter(prefix="/tasks", tags=["tasks"])
 logger = get_logger(__name__)

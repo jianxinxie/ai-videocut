@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from fastapi import BackgroundTasks
 
-from app.workers.video_pipeline import run_video_pipeline
+from ..workers.video_pipeline import run_video_pipeline
 
 
 class BackgroundTaskQueue:

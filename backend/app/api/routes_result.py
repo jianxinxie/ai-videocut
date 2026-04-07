@@ -2,9 +2,9 @@ from __future__ import annotations
 
 from fastapi import APIRouter, HTTPException
 
-from app.models.schemas import ResultResponse
-from app.models.task import TaskStatus
-from app.services.task_service import task_service
+from ..models.schemas import ResultResponse
+from ..models.task import TaskStatus
+from ..services.task_service import task_service
 
 router = APIRouter(prefix="/tasks", tags=["results"])
 
