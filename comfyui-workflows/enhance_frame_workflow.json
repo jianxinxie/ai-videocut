@@ -1,0 +1,11 @@
+{
+  "name": "enhance_frame_workflow",
+  "description": "Placeholder workflow for future frame enhancement.",
+  "inputs": {
+    "frame_path": ""
+  },
+  "outputs": {
+    "enhanced_frame_path": ""
+  },
+  "nodes": {}
+}

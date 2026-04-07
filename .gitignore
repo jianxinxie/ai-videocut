@@ -1,0 +1,84 @@
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors and IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Environment and local configuration
+.env
+.env.*
+!.env.example
+*.local
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.python-version
+.venv/
+venv/
+env/
+ENV/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
+
+# Node / frontend
+node_modules/
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+frontend/.cache/
+coverage/
+
+# FastAPI / video processing local data
+backend/uploads/
+backend/outputs/
+backend/temp/
+backend/tmp/
+backend/.cache/
+backend/data/
+
+# Generated media and intermediate processing artifacts
+outputs/
+temp/
+tmp/
+cache/
+*.tmp
+*.temp
+*.part
+*.ffconcat
+
+# Celery / local services
+celerybeat-schedule
+*.pid
+*.sock
+
+# Local databases
+*.sqlite
+*.sqlite3
+*.db
+
+# ComfyUI generated files
+ComfyUI/output/
+ComfyUI/temp/
+ComfyUI/input/

@@ -1,0 +1,12 @@
+{
+  "name": "hook_cover_workflow",
+  "description": "Placeholder workflow for future hook cover generation.",
+  "inputs": {
+    "frame_path": "",
+    "title": ""
+  },
+  "outputs": {
+    "cover_path": ""
+  },
+  "nodes": {}
+}

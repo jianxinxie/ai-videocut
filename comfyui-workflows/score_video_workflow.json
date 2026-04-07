@@ -1,0 +1,12 @@
+{
+  "name": "score_video_workflow",
+  "description": "Placeholder workflow for future ComfyUI keyframe or segment scoring.",
+  "inputs": {
+    "video_path": "",
+    "frame_paths": []
+  },
+  "outputs": {
+    "scores": []
+  },
+  "nodes": {}
+}
